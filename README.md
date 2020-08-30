@@ -112,10 +112,6 @@ We are only interested in v and s.
 
 From s, we can get an approximation of the data variance that is covered in the first `n` principal components. The approximate explained variance is given by the formula: the sum of squared s values for all top n components over the sum over squared s values for _all_ components:
 
-\begin{equation*}
-\frac{\sum_{n}^{ } s_n^2}{\sum s^2}
-\end{equation*}
-
 From v, we can learn more about the combinations of original features that make up each principal component.
 
 ### 11. Data Variance
@@ -124,13 +120,9 @@ This PCA model creates 33 principal components, but when we create new dimension
 
 ### Tradeoff: dimensionality vs. data variance
 
-As an illustrative example, say we have original data in three dimensions. So, three dimensions capture 100% of our data variance; these dimensions cover the entire spread of our data. The below images are taken from the PhD thesis,  [“Approaches to analyse and interpret biological profile data”](https://publishup.uni-potsdam.de/opus4-ubp/frontdoor/index/index/docId/696) by Matthias Scholz, (2006, University of Potsdam, Germany).
-
-<img src='notebook_ims/3d_original_data.png' width=35% />
+As an illustrative example, say we have original data in three dimensions. So, three dimensions capture 100% of our data variance; these dimensions cover the entire spread of our data. The below images are taken from the PhD thesis,  [“Approaches to analyse and interpret biological profile data”] by Matthias Scholz, (2006, University of Potsdam, Germany).
 
 Now, Most of this data seems related; it falls close to a 2D plane, and just by looking at the spread of the data, we  can visualize that the original, three dimensions have some correlation. So, we can instead choose to create two new dimensions, made up of linear combinations of the original, three dimensions. These dimensions are represented by the two axes/lines, centered in the data. 
-
-<img src='notebook_ims/pca_2d_dim_reduction.png' width=70% />
 
 If we project this in a new, 2D space, we can see that we still capture most of the original data variance using *just* two dimensions. There is a tradeoff between the amount of variance we can capture and the number of component-dimensions we use to represent our data.
 
