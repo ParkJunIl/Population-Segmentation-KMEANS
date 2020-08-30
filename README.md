@@ -15,11 +15,10 @@ Log in to the [AWS console](https://console.aws.amazon.com) and go to the SageMa
 * The notebook name can be anything and using ml.t2.medium is a good idea as it is covered under the free tier. 
 * For the role, creating a new role works fine. Using the default options is also okay. 
 * It's important to note that notebook instance is needed to have access to S3 resources, which it does by default. In particular, any S3 bucket or object, with “sagemaker" in the name, is available to the notebook.
-* Use the option to **git clone** the project repository into the notebook instance by pasting `https://github.com/udacity/ML_SageMaker_Studies.git`
 
 # Population Segmentation with SageMaker
 
-In this notebook, i employed two, unsupervised learning algorithms to do **population segmentation**. Population segmentation aims to find natural groupings in population data that reveal some feature-level similarities between different regions in the US.
+In this notebook, I employed two, unsupervised learning algorithms to do **population segmentation**. Population segmentation aims to find natural groupings in population data that reveal some feature-level similarities between different regions in the US.
 
 Using **principal component analysis** (PCA) will reduce the dimensionality of the original census data. Then, **k-means clustering** is used to assign each US county to a particular cluster based on where a county lies in component space. How each cluster is arranged in component space can tell us which US counties are most similar and what demographic traits define that similarity; this information is most often used to inform targeted, marketing campaigns that want to appeal to a specific group of people. This cluster information is also useful for learning more about a population by revealing patterns between regions.
 
